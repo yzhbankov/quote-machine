@@ -1,0 +1,20 @@
+body{
+    background-color: aqua;
+}
+.quote {
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 15%;
+}
+.quoteText {
+     padding: 20px;
+     height:50%
+ }
+
+.quoteAuthor {
+    padding: 20px;
+    height:10%
+}
+.nextButton {
+    margin-bottom: 20px;
+}
