@@ -36,7 +36,7 @@ function randomQuote() {
         data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
         success: function (response) {
             $(".quoteText").html('"' + response.quoteText + '"');
-            $(".quoteAuthor").html(response.quoteAuthor);
+            $(".quoteAuthor").html('- ' + response.quoteAuthor);
         }
     });
 }

@@ -8,13 +8,18 @@ body{
 }
 .quoteText {
      padding: 20px;
-     height:50%
+     height:50%;
+    font-size: large;
  }
 
 .quoteAuthor {
     padding: 20px;
-    height:10%
+    height:10%;
+    font-size: small;
 }
 .nextButton {
     margin-bottom: 20px;
+}
+.portfolio {
+    text-align: center;
 }
