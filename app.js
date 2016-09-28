@@ -19,14 +19,22 @@ button.addEventListener('click', function () {
         $(".quoteText").css("opacity", (0.1 * (10 - ticks)).toString());
         $(".quoteAuthor").css("opacity", (0.1 * (10 - ticks)).toString());
         if (ticks == 10) {
-            clearInterval(clock);
             randomQuote();
-            $(".quoteText").css("opacity", 1);
-            $(".quoteAuthor").css("opacity", 1);
-            document.body.style.backgroundColor = getRandomColor();
+        }
+        if (ticks > 10) {
+            $(".quoteText").css("opacity", (0.1 * (ticks - 10)).toString());
+            $(".quoteAuthor").css("opacity", (0.1 * (ticks - 10)).toString());
+        }
+        if (ticks == 20) {
+            clearInterval(clock);
         }
     }, 50);
-
+    var color = getRandomColor();
+    document.body.style.backgroundColor = color;
+    $(".nextButton").css("background-color", color);
+    $(".twitterButton").css("background-color", color);
+    $(".quoteText").css("color", color);
+    $(".quoteAuthor").css("color", color);
 });
 
 function randomQuote() {

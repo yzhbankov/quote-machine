@@ -1,5 +1,6 @@
 body{
-    background-color: aqua;
+    transition: background-color 3s, transform 3s;
+    background-color: #1e43ff;
 }
 .quote {
     background-color: white;
@@ -7,12 +8,16 @@ body{
     margin-top: 15%;
 }
 .quoteText {
+    transition: color 3s, transform 3s;
+    color: #1e43ff;
      padding: 20px;
      height:50%;
     font-size: large;
  }
 
 .quoteAuthor {
+    transition: color 3s, transform 3s;
+    color: #1e43ff;
     padding: 20px;
     height:10%;
     font-size: small;
@@ -21,5 +26,21 @@ body{
     margin-bottom: 20px;
 }
 .portfolio {
+    color: white;
     text-align: center;
 }
+
+.nextButton {
+    background-color: #1e43ff;
+    transition: background-color 3s, transform 3s;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.twitterButton{
+    background-color: #1e43ff;
+    transition: background-color 3s, transform 3s;
+}
+
