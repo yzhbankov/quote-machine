@@ -37,7 +37,6 @@ button.addEventListener('click', function () {
     $(".quoteAuthor").css("color", color);
 });
 
-
 function randomQuote() {
     $.ajax({
         url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
