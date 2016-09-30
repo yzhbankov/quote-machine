@@ -40,14 +40,18 @@ button.addEventListener('click', function () {
 
 function randomQuote() {
     $.ajax({
-        url: "http://api.forismatic.com/api/1.0/?",
-        dataType: "jsonp",
-        data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+        url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
+        type: "POST",
+        contentType: 'application/x-www-form-urlencoded',
+        headers: {
+            "X-Mashape-Key": 'qhyhrKUqBcmshva9qkFDbjNSwNKNp1Ho8TTjsnVyCWLAGdFEWb'
+        },
+        dataType: 'json',
         success: function (response) {
-            $(".quoteText").html('"' + response.quoteText);
-            $(".quoteAuthor").html('- ' + response.quoteAuthor);
-            $(".twitterButton").attr("href", "https://twitter.com/intent/tweet?text=" + '"' + response.quoteText + '" ' +
-                response.quoteAuthor);
+            $(".quoteText").html('"' + response.quote);
+            $(".quoteAuthor").html('- ' + response.author);
+            $(".twitterButton").attr("href", "https://twitter.com/intent/tweet?text=" + '"' + response.quote + '" ' +
+                response.author);
         }
     });
 }
