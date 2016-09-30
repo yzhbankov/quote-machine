@@ -21,11 +21,11 @@ button.addEventListener('click', function () {
         if (ticks == 10) {
             randomQuote();
         }
-        if (ticks > 10) {
-            $(".quoteText").css("opacity", (0.1 * (ticks - 10)).toString());
-            $(".quoteAuthor").css("opacity", (0.1 * (ticks - 10)).toString());
+        if (ticks > 20) {
+            $(".quoteText").css("opacity", (0.1 * (ticks - 20)).toString());
+            $(".quoteAuthor").css("opacity", (0.1 * (ticks - 20)).toString());
         }
-        if (ticks == 20) {
+        if (ticks == 30) {
             clearInterval(clock);
         }
     }, 50);
