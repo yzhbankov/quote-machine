@@ -37,14 +37,17 @@ button.addEventListener('click', function () {
     $(".quoteAuthor").css("color", color);
 });
 
+
 function randomQuote() {
     $.ajax({
         url: "http://api.forismatic.com/api/1.0/?",
         dataType: "jsonp",
         data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
         success: function (response) {
-            $(".quoteText").html('"' + response.quoteText + '"');
+            $(".quoteText").html('"' + response.quoteText);
             $(".quoteAuthor").html('- ' + response.quoteAuthor);
+            $(".twitterButton").attr("href", "https://twitter.com/intent/tweet?text=" + '"' + response.quoteText + '" ' +
+                response.quoteAuthor);
         }
     });
 }

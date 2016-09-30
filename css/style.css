@@ -1,23 +1,25 @@
 body{
-    transition: background-color 3s, transform 3s;
+    transition: background-color 3s;
     background-color: #1e43ff;
 }
 .quote {
     background-color: white;
-    border-radius: 4px;
+    border-radius: 2px;
     margin-top: 15%;
 }
 .quoteText {
-    transition: color 3s, transform 3s;
+    transition: color 3s;
     color: #1e43ff;
-     padding: 20px;
-     height:50%;
-    font-size: large;
+    text-align: center;
+    padding: 20px;
+    height:50%;
+    font-size: x-large;
  }
 
 .quoteAuthor {
-    transition: color 3s, transform 3s;
+    transition: color 3s;
     color: #1e43ff;
+    text-align: right;
     padding: 20px;
     height:10%;
     font-size: small;
@@ -28,19 +30,39 @@ body{
 .portfolio {
     color: white;
     text-align: center;
+    font-size: x-small;
 }
 
 .nextButton {
     background-color: #1e43ff;
-    transition: background-color 3s, transform 3s;
+    transition: background-color 3s;
     color: white;
     border: none;
     text-decoration: none;
     display: inline-block;
 }
 
-.twitterButton{
-    background-color: #1e43ff;
-    transition: background-color 3s, transform 3s;
+.nextButton:hover{
+    opacity: 0.8;
 }
 
+.twitterButton:hover{
+    opacity: 0.8;
+    border-color: transparent;
+}
+
+.twitterButton{
+    background-color: #1e43ff;
+    border-color: transparent;
+    color: white;
+    transition: background-color 3s;
+}
+
+@media screen and (max-width: 740px) {
+    .quote {
+        height:100%;
+        background-color: white;
+        border-radius: 5px;
+        margin-top: 35%;
+    }
+}
