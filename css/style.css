@@ -66,10 +66,18 @@ body{
         margin-top: 10%;
         height: 90vh;
     }
+    .quoteText {
+        transition: color 3s;
+        color: #1e43ff;
+        text-align: center;
+        padding: 20px;
+        height:60vh;
+        font-size: x-large;
+    }
     .quoteAuthor {
         transition: color 3s;
         color: #1e43ff;
-        text-align: right;
+        text-align: center;
         padding: 20px 20px 80px 20px;
         height:10%;
         font-size: small;
